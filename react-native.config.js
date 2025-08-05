@@ -14,7 +14,7 @@ module.exports = {
         cxxModuleCMakeListsModuleName: "TurboSqlite",
         cxxModuleCMakeListsPath: `CMakeLists.txt`,
         cxxModuleHeaderName: "TurboSqliteModule",
-        sourceDir: "cpp",
+        sourceDir: "android",
       },
     },
   },

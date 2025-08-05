@@ -6,8 +6,8 @@ set(CMAKE_VERBOSE_MAKEFILE on)
 set(CMAKE_CXX_STANDARD 20)
 
 # Separate C and C++ files
-file(GLOB c_source_files CONFIGURE_DEPENDS *.c)
-file(GLOB cpp_source_files CONFIGURE_DEPENDS *.cpp)
+file(GLOB c_source_files CONFIGURE_DEPENDS ../cpp/*.c)
+file(GLOB cpp_source_files CONFIGURE_DEPENDS ../cpp/*.cpp)
 
 # Add SQLite compilation flags
 # add_compile_definitions(SQLITE_ENABLE_RTREE SQLITE_ENABLE_FTS4 SQLITE_ENABLE_FTS5 SQLITE_ENABLE_JSON1 SQLITE_ENABLE_RBU SQLITE_ENABLE_SESSION)
@@ -16,7 +16,7 @@ file(GLOB cpp_source_files CONFIGURE_DEPENDS *.cpp)
 add_library(TurboSqlite STATIC ${c_source_files} ${cpp_source_files})
 
 # Add headers search paths
-target_include_directories(TurboSqlite PUBLIC .)
+target_include_directories(TurboSqlite PUBLIC ../cpp)
 
 # Set C++ specific compile options
 set(CXX_COMPILE_OPTIONS -fexceptions -frtti -std=c++20)
