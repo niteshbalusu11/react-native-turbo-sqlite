@@ -26,5 +26,4 @@ target_compile_options(TurboSqlite PRIVATE
     $<$<COMPILE_LANGUAGE:CXX>:${CXX_COMPILE_OPTIONS}>
 )
 
-# Finally link the library with the codegen specs
-target_link_libraries(TurboSqlite react_codegen_RNTurboSqliteSpec)
+# The application's CMakeLists.txt will link the library with the codegen specs.

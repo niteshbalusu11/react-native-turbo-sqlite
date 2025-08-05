@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.facebook.react'
 apply plugin: 'kotlin-android'
 
+react {
+    codegenDir = file("build/generated/source/codegen")
+}
 
 android {
     compileSdkVersion 31
