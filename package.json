@@ -193,9 +193,6 @@
     "name": "RNTurboSqliteSpec",
     "type": "all",
     "jsSrcsDir": "src",
-    "outputDir": {
-      "android": "android/build"
-    },
     "android": {
       "javaPackageName": "com.turbosqlite"
     }
